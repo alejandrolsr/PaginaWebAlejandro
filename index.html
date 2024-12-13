@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Fuentes Externas --> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@400;700&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/styles.css">
+        <title>Compra-Venta Salvatierra</title>
+    </head>
+<body>
+    <header class="header">
+        <!-- Contenedor de logotipos de marcas -->
+        <div class="logo-container">
+            <img src="./images/iconAudi.png" alt="Logo Audi" class="logo">
+            <img src="./images/iconBMW.png" alt="Logo BMW" class="logo2">
+            <img src="./images/iconMercedes.png" alt="Logo Mercedes" class="logo3">
+            <img src="./images/iconVW.png" alt="Logo VW" class="logo3">
+        </div>
+        <h1>Compra Venta Salvatierra</h1>
+        <!-- Repetición de logotipos -->
+        <div class="logo-container">
+            <img src="./images/iconAudi.png" alt="Logo Audi" class="logo">
+            <img src="./images/iconBMW.png" alt="Logo BMW" class="logo2">
+            <img src="./images/iconMercedes.png" alt="Logo Mercedes" class="logo3">
+            <img src="./images/iconVW.png" alt="Logo VW" class="logo3">
+        </div>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav class="nav">
+        <!-- Menú de navegación con casilla de verificación para dispositivos móviles -->
+        <input type="checkbox" id="nav-toggle" />
+        <label for="nav-toggle" class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./marcas.html">Marcas</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+            <li><a href="./resenas.html">Reseñas</a></li>
+            <li><a href="./servicios.html">Servicios</a></li>
+        </ul>
+    </nav>
+
+    <main class="main">
+        <!-- Sección de bienvenida -->
+        <h2 class="bienvenida">Bienvenidos a Compra-Venta Salvatierra</h2>
+        <p class="intro">
+            En Compra-Venta Salvatierra, nuestra misión es llevar la experiencia de adquirir o vender un coche de lujo a un nivel superior.<br> 
+            Nos especializamos en vehículos de alta gama de las marcas más prestigiosas del mercado, como <b>Volkswagen, Audi, BMW y Mercedes-Benz.</b>
+        </p>
+
+        <!-- Sección con tarjetas de información sobre los servicios -->
+        <section class="flex-container">
+            <article class="flex-item">
+                <h3>Vehículos Disponibles</h3>
+                <img src="./images/principal1.jpg" alt="Foto Coche de Lujo" class="principal">
+                <a href="./marcas.html"><button class="btn">Ver Vehículos</button></a>
+            </article>
+            <article class="flex-item">
+                <h3>Alta Fiabilidad</h3>
+                <img src="./images/principal2.png" alt="Foto mecánico profesional" class="principal">
+                <a href="./resenas.html"><button class="btn">Ver Reseñas</button></a>
+            </article>
+            <article class="flex-item">
+                <h3>Gran Detallado</h3>
+                <img src="./images/principal3.jpg" alt="Foto mecánico profesional" class="principal">
+                <a href="./servicios.html"><button class="btn">Ver Servicios</button></a>
+            </article>
+        </section>
+
+        <!-- Sección adicional con información relevante sobre los servicios ofrecidos -->
+        <section class="informacion-adicional">
+            <h2>Información Adicional</h2>
+            <p>Si todavía estas dudando en vender tu vehículo o comprar uno nuevo, no dudes en elegirnos. Nuestro equipo de expertos está disponible para asesorarte en cada paso del proceso.</p>
+            <p>Ofrecemos servicios de financiamiento, garantía extendida y mantenimiento para asegurar que tu vehículo se mantenga en óptimas condiciones.</p>
+            <a href="./contacto.html"><button class="btn">Contáctanos para más información</button></a>
+        </section>
+    </main>
+
+    <!-- Pie de página con información de derechos de autor -->
+    <footer class="footer">
+        <p>&copy; 2024 Compra-Venta Salvatierra. Todos los derechos reservados.</p>
+        <p>Las marcas mencionadas son propiedad de sus respectivos dueños.</p>
+    </footer>
+</body>
+</html>

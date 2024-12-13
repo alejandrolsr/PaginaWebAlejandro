@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo general */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #000000; 
+    color: #C0C0C0;
+}
+/*Estilo del header*/
+header {
+    background-color: #5a1818; 
+    color: white;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    padding: 1rem 0; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    z-index: 1; 
+    position: relative; 
+}
+
+header h1 {
+    flex: 1; 
+    text-align: center;
+}
+
+/* Estilo del logotipo */
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo {
+    width: 6vh;
+    height: auto; 
+    margin: 0 2vw;
+}
+
+.logo2 {
+    width: 5vh; 
+    height: auto;
+    margin: 0 2vw; 
+}
+
+.logo3 {
+    width: 4vh; 
+    height: auto; 
+    margin: 0 2vw;
+}
+
+/* Media para ocultar los logos en tablets y móviles */
+
+@media (max-width: 953px) { /* Tablet */
+    .logo-container {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) { /* Móvil */
+    .logo-container {
+        display: none;
+    }
+}
+
+/* Estilos del Header */
+header h1 {
+    font-size: 2.5rem; 
+    margin: 0;
+}
+
+main{
+    padding: 1vh;
+    margin: 1vh;
+}
+
+main p {
+    margin-top: 1vh;
+    margin-left: 2vh;
+}
+
+footer {
+    background-color: #5a1818; /* Burdeos */
+    color: white;
+    text-align: center;
+    position: relative;
+    margin-top: auto;
+    padding: 1vh 0; 
+}
+
+/* Estilo general del menú */
+.nav {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav li {
+    margin-right: 40px; /* Aumenta la separación entre las opciones */
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Agrega una transición para el efecto hover */
+    font-family: 'Roboto', sans-serif; /* Agrega la fuente Roboto */
+}
+
+.nav a:hover {
+    color: #B8860B; /* Cambia el color del texto al hacer hover */
+}
+
+
+/* Estilos para la hamburguesa en tablet y móviles */
+@media (max-width: 768px) {
+    .nav {
+        padding: 0; /* Elimina el padding superior e inferior */
+        background-color: transparent; /* Cambia el color de fondo a transparente */
+        align-self: flex-start;
+    }
+    .nav ul {
+        flex-direction: column;
+        display: none;
+        padding: 1rem; /* Añade un padding superior e inferior */
+    }
+    .nav li {
+        margin-right: 0;
+        margin-bottom: 10px; /* Añade un margen inferior entre cada opción */
+        margin-left: 0; /* Alinea los elementos a la izquierda */
+    }
+    .nav a {
+        padding: 10px;
+        font-family: 'Roboto', sans-serif; /* Agrega la fuente Roboto */
+    }
+    .nav a:hover {
+        color: #B8860B; /* Cambia el color del texto al hacer hover */
+        background-color: #3a3a3a; /* Cambia el color de fondo al hacer hover */
+    }
+    .nav-toggle {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        margin: 1rem; /* Añade un margen superior e inferior */
+    }
+    .nav-toggle span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+    }
+    .nav-toggle span:nth-child(1) {
+        top: 40%;
+    }
+    .nav-toggle span:nth-child(3) {
+        top: 60%;
+    }
+    #nav-toggle:checked + .nav-toggle span:nth-child(1) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    #nav-toggle:checked + .nav-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+    #nav-toggle:checked + .nav-toggle span:nth-child(3) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    #nav-toggle:checked ~ ul {
+        display: block;
+    }
+    #nav-toggle {
+        display: none;
+    }
+}
+
+/* Estilos para ocultar el checkbox y el botón de hamburguesa en la versión de escritorio */
+@media (min-width: 769px) {
+    .nav-toggle {
+        display: none;
+    }
+    #nav-toggle {
+        display: none;
+    }
+    .nav ul {
+        justify-content: center; 
+        margin: 0 auto; 
+    }
+}
+
+.btn {
+    background-color: #A67C00;
+    color: white;
+    border: none; 
+    border-radius: 5px;
+    padding: 0.5rem 1rem; 
+    font-size: 1rem; 
+    cursor: pointer; 
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #B8860B; 
+    transform: scale(1.1); 
+}
+
+/* Efectos en pantallas más pequeñas */
+@media (max-width: 50vw) {
+    nav ul {
+        flex-direction: column; 
+    }
+
+    nav ul li {
+        margin: 2vh 0; 
+    }
+}
+
+/*Estilos de la imagen*/
+.hero-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+/*Estilos del contenedor*/
+.models-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.model {
+    flex: 1; 
+    margin: 0 10px;
+    background-color: #333; 
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.model:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.model img {
+    width: 100%; 
+    height: auto;
+    border-radius: 5px; 
+}
+
+@media (max-width: 768px) {
+    .models-container {
+        flex-direction: column;
+    }
+    .model {
+        margin: 10px 0; 
+    }
+}

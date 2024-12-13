@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Enlace a Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@400;700&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/stylescontacto.css">
+     <title>Contacto</title>
+</head>
+<body>
+    <!-- Encabezado de la página con logotipos y nombre de la empresa -->
+    <header class="header">
+        <div class="logo-container">
+            <!-- Logotipos de las marcas asociadas con la empresa -->
+            <img src="./images/iconAudi.png" alt="Logo Audi" class="logo">
+            <img src="./images/iconBMW.png" alt="Logo BMW" class="logo2">
+            <img src="./images/iconMercedes.png" alt="Logo Mercedes" class="logo3">
+            <img src="./images/iconVW.png" alt="Logo VW" class="logo3">
+        </div>
+        <!-- Nombre de la empresa -->
+        <h1>Compra Venta Salvatierra</h1>
+        <div class="logo-container">
+            <img src="./images/iconAudi.png" alt="Logo Audi" class="logo">
+            <img src="./images/iconBMW.png" alt="Logo BMW" class="logo2">
+            <img src="./images/iconMercedes.png" alt="Logo Mercedes" class="logo3">
+            <img src="./images/iconVW.png" alt="Logo VW" class="logo3">
+        </div>
+    </header>
+
+    <!-- Barra de navegación del sitio -->
+    <nav class="nav">
+        <!-- Menú desplegable (hamburguesa) para dispositivos móviles -->
+        <input type="checkbox" id="nav-toggle" />
+        <label for="nav-toggle" class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <!-- Enlaces de navegación -->
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./marcas.html">Marcas</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+            <li><a href="./resenas.html">Reseñas</a></li>
+            <li><a href="./servicios.html">Servicios</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+    
+        <h2 class="contactanos">Contáctanos</h2>
+        
+        <!-- Formulario de contacto -->
+        <form action="#" method="post" class="contact-form">
+            <!-- Campo de texto para el nombre -->
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required pattern="[A-Za-z\s]{3,50}" title="El nombre debe contener solo letras y espacios, entre 3 y 50 caracteres">
+
+            <!-- Campo de texto para el teléfono -->
+            <label for="phone">Teléfono &#128242:</label>
+            <input type="tel" id="phone" name="phone" required pattern="^\+?[0-9]{1,3}?[-. ]?(\([0-9]{1,4}\)|[0-9]{1,4})[-. ]?[0-9]{1,4}[-. ]?[0-9]{1,4}$" title="Por favor ingrese un teléfono válido (ej. +34 123 456 789)">
+
+            <!-- Campo de texto para el correo electrónico -->
+            <label for="email">Correo Electrónico &#128233:</label>
+            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}" title="Ingrese un correo electrónico válido">
+
+            <!-- Grupo de botones de opción (radio) para elegir el interés -->
+            <fieldset>
+                <legend>Interesado en:</legend>
+                <label>
+                    <input type="radio" id="buy" name="interest" value="Comprar" required>
+                    Comprar
+                </label>
+                <label>
+                    <input type="radio" id="sell" name="interest" value="Vender" required>
+                    Vender
+                </label>
+            </fieldset>
+
+            <!-- Campo de texto para el mensaje adicional -->
+            <label for="message">Más información:</label>
+            <textarea id="message" name="message" rows="4" maxlength="500" title="Máximo 500 caracteres"></textarea>
+
+            <!-- Checkbox para aceptar la política de privacidad -->
+            <label>
+                <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+                He leído y acepto la <a href="./politicaprivacidad.html" target="_blank">Política de Privacidad</a> y autorizo el uso de mis datos conforme a lo establecido.
+            </label>
+
+            <!-- Botón para enviar el formulario -->
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+
+        <!-- Sección para mostrar el mapa de ubicación -->
+        <h2 class="map-title">Búscanos</h2>
+        <div class="map-container">
+            <!-- Incrustación del mapa de Google Maps -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509123!2d144.9537353153164!3d-37.81627997975157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11f1b3%3A0x5045675218ceed0!2sYour%20Location!5e0!3m2!1sen!2sus!4v1616161616161!5m2!1sen!2sus" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </main>
+
+    <!-- Pie de página con derechos de autor y marcas registradas -->
+    <footer class="footer">
+        <p>&copy; 2024 Compra-Venta Salvatierra. Todos los derechos reservados.</p>
+        <p>Las marcas mencionadas son propiedad de sus respectivos dueños.</p>
+    </footer>
+</body>
+</html>
